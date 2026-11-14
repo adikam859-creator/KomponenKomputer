@@ -1,2 +1,71 @@
-# komponen-komputer
-menjelaskan tentang komponen komputer
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komputer — Mengenal Komponen dan Fungsinya</title>
+<style>
+:root{--bg:#081225;--panel:#111f38;--panel2:#172945;--text:#eef5ff;--muted:#a9bad2;--cyan:#54d6e8;--violet:#9a8cff;--lime:#a8edbd;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#1b2c55 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.brand{font-weight:800;letter-spacing:.4px;font-size:18px}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px}
+.hero{padding:68px 0 56px;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.05;margin:14px 0 18px;letter-spacing:-2px}.hero p{color:var(--muted);font-size:17px;max-width:620px}.actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.btn{border:1px solid var(--line);padding:12px 18px;border-radius:12px;font-weight:700;font-size:14px}.primary{background:linear-gradient(120deg,var(--cyan),#8e9bff);color:#071225;border:0}.hero-art{background:linear-gradient(145deg,#1b3154,#101c33);border:1px solid var(--line);border-radius:28px;padding:25px;min-height:300px;display:grid;place-items:center;box-shadow:0 25px 80px #0005}
+.board{width:100%;max-width:390px;aspect-ratio:1.15;border:2px solid #58cde0;border-radius:22px;position:relative;background:linear-gradient(135deg,#173e55,#172b49);box-shadow:inset 0 0 35px #57d5e622}
+.chip{position:absolute;left:35%;top:30%;width:32%;height:38%;border:2px solid var(--violet);border-radius:12px;background:#28385c;display:grid;place-items:center;text-align:center;font-weight:800;color:#fff;box-shadow:0 0 25px #9a8cff55}
+.chip small{display:block;color:#b9c2ff;font-size:10px}.slot{position:absolute;height:9px;border-radius:6px;background:#8ce1d2;opacity:.8}.s1{left:8%;top:15%;width:25%}.s2{right:8%;top:20%;width:23%}.s3{left:12%;bottom:19%;width:22%}.s4{right:8%;bottom:17%;width:28%}
+.pin{position:absolute;width:5px;height:25px;background:#f4c86a;top:100%;left:15%;box-shadow:12px 0 #f4c86a,24px 0 #f4c86a,36px 0 #f4c86a}
+section{padding:54px 0}.section-head{max-width:700px;margin-bottom:26px}.section-head h2{font-size:clamp(27px,4vw,38px);margin:8px 0}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,var(--panel),#0e1a2e);border:1px solid var(--line);border-radius:18px;padding:20px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#54d6e877}.icon{font-size:28px}.card h3{margin:10px 0 5px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}.tag{display:inline-block;margin-top:14px;padding:5px 9px;border-radius:20px;background:#54d6e81b;color:var(--cyan);font-size:11px;font-weight:800}
+.explorer{display:grid;grid-template-columns:280px 1fr;gap:18px}.tabs{display:grid;gap:8px}.tab{background:var(--panel);border:1px solid var(--line);padding:13px 15px;border-radius:12px;text-align:left;color:var(--muted);font-weight:700;cursor:pointer}.tab.active{background:#193b52;border-color:var(--cyan);color:#fff}.detail{background:linear-gradient(145deg,#142744,#101b30);border:1px solid var(--line);border-radius:20px;padding:28px;min-height:260px}.detail h3{font-size:26px;margin:5px 0 10px}.detail p,.detail li{color:var(--muted)}.detail ul{padding-left:20px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:center}.flowbox{padding:18px 10px;text-align:center;border:1px solid var(--line);background:var(--panel);border-radius:14px;font-size:13px;font-weight:800}.arrow{text-align:center;color:var(--cyan);font-size:20px}
+.quiz{background:linear-gradient(120deg,#172c4d,#17203b);border:1px solid var(--line);border-radius:22px;padding:26px}.quiz h3{margin-top:0}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.option{padding:12px;border-radius:11px;border:1px solid var(--line);background:#0d1b31;color:var(--text);text-align:left;cursor:pointer}.option:hover{border-color:var(--cyan)}#feedback{min-height:28px;color:var(--lime);font-weight:700;margin-top:12px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:38px}.navlinks{gap:12px;font-size:12px}.grid{grid-template-columns:1fr 1fr}.explorer{grid-template-columns:1fr}.tabs{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.navlinks a:nth-child(2){display:none}.tabs{grid-template-columns:1fr 1fr}.hero-art{min-height:230px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><div class="brand">KOMPUTER<span>.</span>LAB</div><div class="navlinks"><a href="#komponen">Komponen</a><a href="#alur">Cara Kerja</a><a href="#kuis">Kuis</a></div></nav>
+<header class="hero">
+ <div><div class="eyebrow">Arsitektur & Organisasi Komputer</div><h1>Kenali isi komputer, pahami cara kerjanya.</h1>
+ <p>Komputer tersusun dari berbagai komponen yang saling bekerja sama. Yuk, pelajari fungsi setiap bagian dengan tampilan yang sederhana dan interaktif.</p>
+ <div class="actions"><a class="btn primary" href="#komponen">Mulai eksplorasi ↗</a><a class="btn" href="#alur">Lihat alur kerja</a></div></div>
+ <div class="hero-art"><div class="board"><div class="slot s1"></div><div class="slot s2"></div><div class="slot s3"></div><div class="slot s4"></div><div class="chip">CPU<small>PUSAT PEMROSESAN</small><i class="pin"></i></div></div></div>
+</header>
+<section id="komponen"><div class="section-head"><div class="eyebrow">Bagian utama</div><h2>Komponen komputer dan fungsinya</h2><p>Pilih salah satu komponen pada panel untuk melihat penjelasan yang lebih lengkap.</p></div>
+<div class="explorer"><div class="tabs" id="tabs">
+<button class="tab active" data-key="cpu">🧠 Prosesor (CPU)</button><button class="tab" data-key="mb">🧩 Motherboard</button><button class="tab" data-key="ram">⚡ RAM</button><button class="tab" data-key="storage">💾 Penyimpanan</button><button class="tab" data-key="gpu">🎮 GPU / VGA</button><button class="tab" data-key="psu">🔌 Power Supply</button><button class="tab" data-key="input">⌨️ Perangkat Input</button><button class="tab" data-key="output">🖥️ Perangkat Output</button><button class="tab" data-key="cooling">❄️ Pendingin</button>
+</div><article class="detail" id="detail"><div class="eyebrow">Komponen terpilih</div><h3>🧠 Prosesor (CPU)</h3><p>CPU adalah pusat pemrosesan komputer. Komponen ini menjalankan instruksi program dan mengolah data.</p><ul><li>Melakukan operasi aritmetika dan logika.</li><li>Mengatur jalannya instruksi dari program.</li><li>Berkoordinasi dengan memori dan perangkat lain.</li></ul><b>Contoh:</b> Intel Core dan AMD Ryzen.</article></div>
+</section>
+<section id="alur"><div class="section-head"><div class="eyebrow">Dari input ke output</div><h2>Bagaimana komputer bekerja?</h2><p>Secara sederhana, komputer menerima data, memprosesnya, lalu menghasilkan informasi.</p></div>
+<div class="flow"><div class="flowbox">⌨️ INPUT<br><small>Data dimasukkan</small></div><div class="arrow">→</div><div class="flowbox">🧠 PROCESS<br><small>CPU mengolah data</small></div><div class="arrow">→</div><div class="flowbox">🖥️ OUTPUT<br><small>Hasil ditampilkan</small></div></div>
+<div class="grid" style="margin-top:18px"><div class="card"><div class="icon">📥</div><h3>Input</h3><p>Keyboard, mouse, mikrofon, dan scanner memasukkan data atau perintah ke komputer.</p></div><div class="card"><div class="icon">⚙️</div><h3>Proses</h3><p>CPU menjalankan instruksi. RAM menyimpan data sementara yang sedang digunakan.</p></div><div class="card"><div class="icon">📤</div><h3>Output</h3><p>Monitor, speaker, dan printer menyajikan hasil pemrosesan kepada pengguna.</p></div></div>
+</section>
+<section id="kuis"><div class="section-head"><div class="eyebrow">Uji pemahaman</div><h2>Kuis singkat</h2><p>Coba jawab pertanyaan berikut untuk mengecek pemahamanmu.</p></div>
+<div class="quiz"><h3>Komponen apa yang berfungsi sebagai pusat pemrosesan instruksi komputer?</h3><div class="options"><button class="option" data-correct="false">A. RAM</button><button class="option" data-correct="true">B. CPU</button><button class="option" data-correct="false">C. Power Supply</button><button class="option" data-correct="false">D. Monitor</button></div><div id="feedback" aria-live="polite"></div></div>
+</section>
+<footer><div><b>KOMPUTER.LAB</b> · Media pembelajaran Arsitektur dan Organisasi Komputer<br>Materi ringkas untuk project individu. Dibuat sebagai media edukasi.</div></footer>
+</div>
+<script>
+const data={
+cpu:{title:"🧠 Prosesor (CPU)",desc:"CPU adalah pusat pemrosesan komputer. Komponen ini menjalankan instruksi program dan mengolah data.",items:["Melakukan operasi aritmetika dan logika.","Mengatur jalannya instruksi dari program.","Berkoordinasi dengan memori dan perangkat lain."],ex:"Intel Core dan AMD Ryzen."},
+mb:{title:"🧩 Motherboard",desc:"Motherboard adalah papan sirkuit utama yang menghubungkan berbagai komponen agar dapat saling berkomunikasi.",items:["Menjadi tempat pemasangan CPU, RAM, dan komponen lain.","Menyediakan jalur komunikasi antarkomponen.","Menghubungkan port dan perangkat tambahan."],ex:"Motherboard dengan chipset Intel atau AMD."},
+ram:{title:"⚡ RAM",desc:"RAM merupakan memori sementara untuk menyimpan data dan instruksi yang sedang digunakan CPU.",items:["Mempercepat akses data yang sedang aktif.","Menyimpan data sementara saat aplikasi berjalan.","Isinya umumnya hilang ketika komputer dimatikan."],ex:"RAM DDR4 atau DDR5."},
+storage:{title:"💾 Penyimpanan (SSD/HDD)",desc:"Media penyimpanan menyimpan sistem operasi, aplikasi, dan file secara permanen meskipun komputer dimatikan.",items:["Menyimpan dokumen, foto, video, dan aplikasi.","Memuat sistem operasi saat komputer dinyalakan.","SSD umumnya lebih cepat daripada HDD."],ex:"SSD NVMe, SSD SATA, dan HDD."},
+gpu:{title:"🎮 GPU / VGA",desc:"GPU mengolah data grafis dan menghasilkan tampilan visual yang dikirim ke monitor.",items:["Memproses gambar, video, dan animasi.","Membantu pekerjaan grafis dan komputasi paralel.","Bisa terintegrasi pada CPU atau berupa kartu tersendiri."],ex:"NVIDIA GeForce dan AMD Radeon."},
+psu:{title:"🔌 Power Supply (PSU)",desc:"PSU mengubah listrik dari sumber AC menjadi tegangan DC yang dibutuhkan komponen komputer.",items:["Menyuplai daya ke motherboard dan komponen lain.","Menjaga pasokan listrik sesuai kebutuhan perangkat.","Kapasitas daya dinyatakan dalam watt."],ex:"PSU 450 W, 550 W, atau 650 W."},
+input:{title:"⌨️ Perangkat Input",desc:"Perangkat input digunakan untuk memasukkan data dan perintah agar dapat diproses komputer.",items:["Keyboard memasukkan teks dan perintah.","Mouse mengendalikan penunjuk pada layar.","Mikrofon dan scanner memasukkan suara atau gambar."],ex:"Keyboard, mouse, mikrofon, scanner."},
+output:{title:"🖥️ Perangkat Output",desc:"Perangkat output menyampaikan hasil pemrosesan komputer kepada pengguna.",items:["Monitor menampilkan teks, gambar, dan video.","Speaker mengeluarkan suara.","Printer mencetak dokumen ke media kertas."],ex:"Monitor, speaker, dan printer."},
+cooling:{title:"❄️ Sistem Pendingin",desc:"Sistem pendingin membantu membuang panas agar komponen bekerja pada suhu yang aman.",items:["Heatsink menyerap dan menyebarkan panas.","Kipas membantu mengalirkan udara.","Pendingin cair menggunakan cairan untuk memindahkan panas."],ex:"CPU cooler, case fan, dan liquid cooler."}
+};
+document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+ const d=data[btn.dataset.key];document.getElementById("detail").innerHTML=`<div class="eyebrow">Komponen terpilih</div><h3>${d.title}</h3><p>${d.desc}</p><ul>${d.items.map(x=>`<li>${x}</li>`).join("")}</ul><b>Contoh:</b> ${d.ex}`;
+}));
+document.querySelectorAll(".option").forEach(btn=>btn.addEventListener("click",()=>{
+ const f=document.getElementById("feedback");f.textContent=btn.dataset.correct==="true"?"Benar! CPU menjalankan instruksi dan memproses data. 🎉":"Belum tepat. Coba ingat kembali komponen yang menjadi pusat pemrosesan.";
+ f.style.color=btn.dataset.correct==="true"?"#a8edbd":"#ffd18b";
+}));
+</script>
+</body></html>
